@@ -1,0 +1,8 @@
+#!/usr/bin/env bash
+#lsiting all files in pwd
+var=$(ls)
+for i in $var
+do
+	echo "$i"
+	((i++))
+done

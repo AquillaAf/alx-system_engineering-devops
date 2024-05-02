@@ -1,0 +1,12 @@
+#!/usr/bin/env bash
+# This script is printing Best scholl, when it gets to 9 it prints hi
+var='Best School'
+count=1
+while [ $count -lt 11 ]
+do
+	echo "$var"
+	if [ $count -eq 9 ]; then
+		echo "hi"
+	fi
+	((count++))
+done

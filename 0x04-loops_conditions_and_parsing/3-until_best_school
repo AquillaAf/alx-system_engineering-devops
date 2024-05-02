@@ -1,0 +1,9 @@
+#!/usr/bin/env bash
+# this script is printing best school 10 times
+var='Best School'
+count=1
+until [ $count -eq 10 ]
+do
+	echo "$var"
+	((count++))
+done

@@ -1,0 +1,15 @@
+#!/usr/bin/env bash
+#clock is ticking
+count=0
+hour_count=0
+while  [ $hour_count -lt 780 ]
+do
+	if [ $((count % 60)) -eq 0 ]; then
+		count=0
+		echo "Hour: $((hour_count/60))"
+	else
+		echo "$count"
+	fi
+	((count++))
+	((hour_count++))
+done
