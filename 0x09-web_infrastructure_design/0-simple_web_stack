@@ -1,0 +1,13 @@
+1. A  server is a computer hardware or software that provides funtionality (compute, storage e.t.c) for other devices or programs
+2. The role of the domain name is for easy identification of a website, instead of memorizing ip addresses
+3. A record
+4. Web server function is to receive Https request from users and send (images, HTML, cgi, e.t.c) as a static content to the user
+5. Application server function is to handle business logic, by interacting with the code base and mostly fetching from the database 
+6. Database function is create, store, update and mange data
+7. Servers uses HTTP or HTTPS (request) from client to communicate with the user, it is the vehicle for transfer of data on the internet
+
+SPOF: single point of failure is intergeral in infrastructure deisgn, here SPOF is likely, because the structure doesnt account for redundancy;  i.e no back-up for problems like, unexpected-shutdown(e.g due to climate), required maintenance, e.t.c. it it is catastrophic and can lead to loss of data and resources, security bridge, e.t.c.
+
+When there is Downtime, when maintenance is needed, the design in the infrastructure should be able to account for stand-by (substitute) service component to cater for this
+
+If there is too much request from multiple clients, this will lea dto high traffic load, which will impair computing power or cause latency, so the design should be able to handle this problem by introducing load balancers
