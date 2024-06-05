@@ -1,0 +1,25 @@
+1. this new infrastructure has few changes, 
+- 1 more server
+-1 load balancer 
+The added server can be a passive server, it serves as a standby server in-case the active server is down due to maintenance or administrator mistake, which may require instant shutdown
+Both server can as well be active servers, in this caseif both server are active they can as well act as load balancer for traffic, 
+
+The added balancer function is to reduce latency, due to internet traffic. peradventure both servers are active the load balancer  will distribute the requests and give the two servers to handle different processes, thereby  improving response time of the servers.
+
+
+2. The load balancer used here is configured in Round robin Algorithm: sequentially each request is assigned to the next server,  and its a continuus loop, that evenly distribute the load accross the whole servers
+
+3. The load balancer is enabling active-active set up. active-active setup is a design that involves two active server, to tackle SPOF possibility, and also serves as a load balancer.
+Active-passive setup is a deign that involves one active server and one inactive standby-server for the purpose of potential failure of the active server.
+
+4. Database primary-Replica: is a safe method of storing data in the DBMS
+the master database usually have a write/Read permission while the slave database usually have the read permision only,but have the ability to be promoted to a master database when there is a downtime, The ability for the master-slave to perform specific permisions is a means for the application server to balance its requests
+
+5. primary node is different from replica node in that, primary node is the main application source while replica node is a standby sample incase of failure
+
+Issues with the built infrastructure include;
+SPOF: single point of failure have been accounted for at the server end, there is enough Redundancy, load balacing to avoid catastrophic failure and internet traffic
+
+Security: No firewalls or HTTPS for our data transfer is violating the stadards of a good software architect, in that the loss of data and attack on resources can occur because the data isnt secured by encryption or firewall.
+
+No monitoring: if a website infrastructure isn't monitored, it becomes hard for developers to resolve a problem with the website, so it helps developers to tackle potential failures before it even happens.
